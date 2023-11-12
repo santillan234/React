@@ -1,3 +1,6 @@
+//Podemos poner estilos en linea pero como un objeto.
+// <article style={{ display: 'flex', color: 'orange'}}
+
 export function App () {
   return (
     <article>
