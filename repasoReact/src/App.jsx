@@ -4,6 +4,7 @@
 
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
+import { Repaso } from './Repaso'
 
 export function App () {
   const format = (userName) => `@${userName}`
@@ -29,6 +30,8 @@ export function App () {
         userName="AzuAvila" 
         name="Azucena Avila" 
       />
+
+      <Repaso />
     </section>
   )
 }
