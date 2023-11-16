@@ -28,6 +28,7 @@ export function Repaso () {
       <h3> {textos.textoTres} </h3>
       <ul> {listaMapeada} </ul>
       <ul> {listaObjeto.map(item => (<li key={item.id} > {item.text} </li>))} </ul>
+      <p lista={listaObjeto} ></p>
     </div>
   )
 }
