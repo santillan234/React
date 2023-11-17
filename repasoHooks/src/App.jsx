@@ -1,17 +1,15 @@
+import Add from './Add'
 import './App.css'
-import { useState } from 'react'
-import { Contador } from './Contador'
-import { Count } from './Count'
+import Blog from './Blog'
+import Contar from './Contar'
 
 export function App() {
-  const [estado, setEstado] = useState('Condicion inicial')
 
   return (
     <>
-      <div>{estado}</div>
-      <button onClick={() => setEstado('Condicion modificada')} >Cambiar Estado</button>
-      <Contador />
-      <Count />
+      <Contar />
+      <Blog />
+      <Add />
     </>
   )
 }
