@@ -1,7 +1,7 @@
-import Add from './Add'
 import './App.css'
 import Blog from './Blog'
 import Contar from './Contar'
+import RelojEffect from './RelojEffect'
 
 export function App() {
 
@@ -9,7 +9,7 @@ export function App() {
     <>
       <Contar />
       <Blog />
-      <Add />
+      <RelojEffect />
     </>
   )
 }

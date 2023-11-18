@@ -1,19 +1,19 @@
-import { useEffect } from "react"
-import { useState } from "react"
+import { useState } from "react";
+import { useEffect } from "react";
 
-export default function Blog (){
-  const [recurso, setRecurso] = useState(() => ('posteos'));
-
-  useEffect(() => {console.log('Efecto Secundario')}, [recurso])
+export default function Blog () {
+  const [estado, setEstado] = useState(() => ('Condicion inicial'))
   
+  useEffect(() => {
+    console.log('Efecto Secundario');
+  }, [estado])
+
   return(
-    <>
-      <div>
-        <button onClick={() => setRecurso('posteos')}>Posteos</button>
-        <button onClick={() => setRecurso('usuarios')}>Usuarios</button>
-        <button onClick={() => setRecurso('comentarios')}>Comentarios</button>
-      </div>
-      <h2>{recurso}</h2>
-    </>
+    <div>
+      <h1>{estado}</h1>
+      <button onClick={() => setEstado('posteo')}>Posteo</button>
+      <button onClick={() => setEstado('comentar')}>Comentar</button>
+      <button onClick={() => setEstado('me gusta')}>Me gusta</button>
+    </div>
   )
 }
