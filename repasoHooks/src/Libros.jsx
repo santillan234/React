@@ -2,15 +2,15 @@ import { createContext } from "react";
 
 export const BookContext = createContext();
 
-export const Libros = (props) => {
+export const Libros = ({children}) => {
   const books = [
-    {id: 1, title: "Dulce", author: "Santillan"},
-    {id: 2, title: "Azucena", author: "Avila"}
+    {id: 1, title:"Rodrigo", author:"Santillan"},
+    {id: 2, title:"Azu", author:"Avila"}
   ]
-  
+
   return(
     <BookContext.Provider value={books}>
-      {props.children}
+      {children}
     </BookContext.Provider>
   )
 }

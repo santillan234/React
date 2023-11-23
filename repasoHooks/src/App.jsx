@@ -1,10 +1,11 @@
 import './App.css'
 import Blog from './Blog'
-import { BooksLista } from './BooksLista'
 import Contar from './Contar'
-import { Libros } from './Libros'
 import RelojEffect from './RelojEffect'
+import { Libros } from './Libros'
+import { BookList } from './BookList'
 import { Header } from './Header'
+import { Tema } from './Tema'
 
 export function App() {
 
@@ -14,9 +15,11 @@ export function App() {
       <Blog />
       <RelojEffect />
       <Libros>
-        <BooksLista />
+        <BookList />
       </Libros>
-      <Header />
+      <Tema>
+        <Header />
+      </Tema>
     </>
   )
 }
