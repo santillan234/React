@@ -4,7 +4,7 @@ import { useState } from "react";
 export const ThemeContext = createContext();
 
 export const Tema = ({children}) => {
-  const [theme, setTheme] = useState(() => ("light"))
+  const [theme, setTheme] = useState(() => ("light"));
 
   const handleTheme = (e) => {
     if (e.target.value === "light") {
