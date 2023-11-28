@@ -5,7 +5,7 @@ export default function Header () {
   const {theme, handleTheme} = useContext(ThemeContext);
   
   return(
-    <header className={theme}>
+    <header className={theme} style={{marginTop: "50px"}}>
       <form>
         <fieldset>
           <label htmlFor="light">Light</label>

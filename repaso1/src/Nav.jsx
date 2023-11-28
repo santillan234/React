@@ -8,7 +8,8 @@ export function Nav () {
         <li><NavLink to="/primero">Primero</NavLink></li>
         <li><NavLink to="/blog">Blog</NavLink></li>
         <li><NavLink to="/reloj">RelojEffect</NavLink></li>
-        <li><NavLink to="/Libros">Libros</NavLink></li>
+        <li><NavLink to="/libros">Libros</NavLink></li>
+        <li><NavLink to="/contador">Contador</NavLink></li>
       </ul>
     </nav>
   )

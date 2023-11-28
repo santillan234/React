@@ -9,6 +9,7 @@ import Libros from "./Libros"
 import { BookList } from "./BookList"
 import Tema from "./Tema"
 import Header from "./Header"
+import Contador from "./Contador"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blog" element={<Blog />}/>
         <Route path="/reloj" element={<RelojEffect />}/>
         <Route path="/libros" element={<Libros> <BookList/> </Libros>}/>
+        <Route path="/contador" element={<Contador />} />
       </Routes>
       <Tema> <Header /> </Tema>
     </Router>
