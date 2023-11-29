@@ -9,7 +9,7 @@ import Libros from "./Libros"
 import { BookList } from "./BookList"
 import Tema from "./Tema"
 import Header from "./Header"
-import Contador from "./Contador"
+import { Contador } from "./Contador"
 
 function App() {
   return (
