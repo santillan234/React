@@ -2,7 +2,7 @@ import {NavLink} from "react-router-dom";
 
 export function Nav () {
   return(
-    <nav>
+    <nav className="encabezado">
       <ul>
         <li><NavLink to="/">Inicio</NavLink></li>
         <li><NavLink to="/primero">Primero</NavLink></li>
