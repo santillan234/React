@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 export const Primero = () => {
@@ -14,20 +15,30 @@ export const Primero = () => {
   const length = lista.length + 1
   const add = () => setLista([...lista,{id: {length}, title: `Lista ${length}`}])
 
+  useEffect(() => {
+    console.log('Efecto Secundario');
+  }, [contador])
+
   return(
     <>
-      <p>
+      <p style={{
+        border: "solid 2px #888",
+      }}>
         <h2>{estado}</h2>
         <p><button onClick={() => setEstado("Condicion Modificada")}>Cambiar Estado</button></p>
       </p>
 
-      <p>
+      <p style={{
+        border: "solid 2px #888",
+      }}>
         <h2>{contador}</h2>
         <button onClick={sumar}>+</button>
         <button onClick={restar}>-</button>
       </p>
 
-      <p>
+      <p style={{
+        border: "solid 2px #888",
+      }}>
         <h2>
           {lista.map( el => 
           <li key={el.id}>{el.title}</li>)}

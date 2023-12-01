@@ -7,7 +7,7 @@ export const reducer = (state, action) => {
     case TYPES.incrementar:
       return{counter: state.counter + 1}
     case TYPES.decrementar:
-      return{counter: state.counter + 1}
+      return{counter: state.counter - 1}
     case TYPES.incrementar2:
       return{counter: state.counter + action.payload}
     case TYPES.decrementar2:

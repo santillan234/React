@@ -71,32 +71,3 @@ button:focus-visible {
   color: grey;
   background-color: #493843;
 }
-
-.encabezado{
-  display: grid;
-  place-content: center;
-  background-color: orange; /* Tenemos que definir altura si o si xq si no, no da el color */
-  width: 100%;
-  height: 60px;
-  font-size: 24px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #fff;
-  padding: 20px;
-  float: right;
-  text-transform: capitalize;
-  margin-bottom: 50px;
-}
-
-.encabezado ul li{
-  list-style: none; /*para que no tenga viñetas*/
-  display: inline-block; /*se ubican uno al lado de otra conservando la altura  */
-  padding: 10px;
-}
-.encabezado ul li a{
-  text-decoration: none; /*para quitarle el subrayado*/
-  color: #fff; /*hay que darle el color directamente a los links*/
-}
-
-.encabezado a:hover{ /*hover es una pseudoclase que cada vez que paso el mouse va a tener algun tipo de apariencia */
-  color: #333; /*cada vez que me posiciono sobre ese elemento va a tener un color distinto */
-}

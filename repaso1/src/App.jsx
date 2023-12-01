@@ -3,7 +3,6 @@ import './App.css'
 import { Nav } from "./Nav"
 import Inicio from "./Inicio"
 import { Primero } from "./Primero"
-import Blog from "./Blog"
 import RelojEffect from "./RelojEffect"
 import Libros from "./Libros"
 import { BookList } from "./BookList"
@@ -17,8 +16,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Inicio />}/>
-        <Route path="/primero" element={<Primero />}/>
-        <Route path="/blog" element={<Blog />}/>
+        <Route path="/useState" element={<Primero />}/>
         <Route path="/reloj" element={<RelojEffect />}/>
         <Route path="/libros" element={<Libros> <BookList/> </Libros>}/>
         <Route path="/contador" element={<Contador />} />

@@ -13,7 +13,7 @@ export const Contador = () => {
 
   return(
     <>
-      <h1>Contador con useReducer</h1>
+      <h1>Contador</h1>
       <h2>{state.counter}</h2>
       <button onClick={sumar}>SUMAR 1</button>
       <button onClick={restar}>RESTAR 1</button>
