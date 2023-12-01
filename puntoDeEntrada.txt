@@ -45,9 +45,10 @@ SI AHORA HACEMOS EN LA CONSOLA: npm run dev, va a salir un eror.
     AHORA SI YA TIENE QUE FUNCIONAR
 - npm run dev
 
-ANTES DE CONTINUAR INSTALAMOS EL esLinter
+ANTES DE CONTINUAR INSTALAMOS EL esLinter en la raiz de todo el proyecto
   npm install standard -D
   luego en package.json: abajo de dependencias agrega lo siguiente:
-    , "eslintConfig": {
+    , 
+    "eslintConfig": {
       "extends": "./node_modules/standard/eslintrc.json"
     }

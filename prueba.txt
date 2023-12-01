@@ -3,3 +3,32 @@ https://cataas.com/cat/says/hello
 
 Recupera un hecho aleatorio de gatos de la primera API
 Y muestra una imagen de un gato con la primera palabra del hecho recuperado usando la segunda API 
+
+--------------------------------------
+
+instalar confettis para ganar:
+consola: npm install canvas-confetti -E
+import confetti from "canvas-confetti"
+para ejecutar la funcion confetti()
+
+--------------------------------------
+
+PARA GUARDAR LOS CAMBIO Y VOLVER A LA PARTIDA. en el local Storage se puede guardar un string
+guardamos un array para que nos convierta en string y luego lo volvemos a transformar
+
+window.localStorage.setItem('aqui va el estado que queremos guardar'. JSON.stringify(guardamos un array))
+ para recuperar el localStorage
+    const boardFromStorage = window.localStorage.getItem('board') 
+      return boardFromStorage? JSON.parse(boardFromStorage) : devolvemos el estado inicial
+
+-------------------------------------
+
+Si hay un evento que no se limpio, podemos saber cual es entrando a la consola del navegador (solo funciona en chrome)
+getEventListeners(window)
+
+-------------------------------------
+
+cambiar el modo a produccion
+
+npm run build //aqui subimos este proyecto 
+luego nos vamos a netlify drop en el navegador
