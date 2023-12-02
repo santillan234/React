@@ -36,7 +36,7 @@ export default function Mouse () {
         transform: `translate(${posicion.x}px, ${posicion.y}px)`
       }}/>
       <button onClick={() => setActivar(!activar)}>
-        {activar ? 'Desactivar' : 'Activar'} seguir puntero
+        {activar ? 'DESACTIVAR' : 'ACTIVAR'} seguir puntero
       </button>
     </>
   )
