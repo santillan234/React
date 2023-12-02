@@ -1,32 +1,45 @@
-import { useState } from "react"
-import { useEffect } from "react"
+//queremos ser capaz de saber cual es la posicion del raton en la pantalla porque vamos a querer seguirlo
 
-export default function RelojEffect () {
-  const [hora, setHora] = useState(() => (new Date().toLocaleTimeString()));
-  const [visible, setVisible] = useState(() => (false));
+import { useEffect, useState } from "react"
+
+export default function Mouse () {
+  const [activar, setActivar] = useState(false)
+  const [posicion, setPosicion] = useState({ x:0, y:0}) //este estado es para guardar la posicion x e y del raton
 
   useEffect(() => {
-    let temporizador;
+    const handlemove = (event) =>{ //esta funcion va a recibir el evento
+      const {clientX, clientY} = event //esta es la posicion que tiene nuestro puntero en la pantalla
+      console.log('handleMove', {clientX, clientY}); //aca veo en la consola donde esta nuestro raton
+      setPosicion({ x: clientX, y: clientY})
+    }
 
-    if (visible) {
-      setInterval( () => 
-        setHora(new Date().toLocaleTimeString())
-      , 1000)
-    } else {
-      clearInterval(temporizador)
+    if (activar){ //si activar es true se ejecuta el siguiente evento
+      window.addEventListener('pointermove', handlemove) //cuando se mueva el puntero vamos a ejecutar la funcion handlemove
+    } 
+    return () => { //hay que remover el evento para que no siga activo, hay que limpiarlo, estaba susbcrito anteriormente pero si no hacemos esto sigue subscrito. hacer que hacer el clean useEffect
+      window.removeEventListener('pointermove', handlemove) //esto se ejecuta cuando se desmonta el componente
     }
-    return () => {
-      clearInterval(temporizador)
-    }
-  }
-  , [visible])
+  }, [activar])
   
   return(
-    <>
-      <h1>Reloj Effect</h1>
-      {visible ? <h2>{hora}</h2> : null}
-      <button onClick={() => setVisible(true)}>Iniciar</button>
-      <button onClick={() => setVisible(false)}>Detener</button>
-    </>
+    <main>
+      <div style={{
+        position: 'absolute',
+        display: `${activar? 'block': 'none'}`,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        border: '1px solid #fff',
+        borderRadius: '50%',
+        opacity: 0.8,
+        pointerEvents: 'none',
+        left: -25,
+        top: -25,
+        width: 50,
+        height: 50,
+        transform: `translate(${posicion.x}px, ${posicion.y}px)` //esto es para seguir al raton
+      }}/>
+      <button onClick={() => setActivar(!activar)}>
+        {activar ? 'Desactivar' : 'Activar'} seguir puntero
+      </button>
+    </main>
   )
 }

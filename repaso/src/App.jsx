@@ -9,6 +9,7 @@ import { BookList } from "./components/BookList"
 import Tema from "./components/Tema"
 import Header from "./components/Header"
 import { Contador } from "./components/Contador"
+import Mouse from "./components/Mouse"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contador" element={<Contador />} />
       </Routes>
       <Tema> <Header /> </Tema>
+      <Mouse />
     </Router>
   )
 }
