@@ -13,6 +13,9 @@ export function Nav () {
       <div className="nav"><NavLink to="/reloj">RelojEffect</NavLink></div>
       <div className="nav"><NavLink to="/libros">Libros-useContext</NavLink></div>
       <div className="nav"><NavLink to="/contador">useReducer</NavLink></div>
+      <div className="nav"><NavLink to="/form">Form</NavLink></div>
+      <div className="nav"><NavLink to="/login">Login</NavLink></div>
+      <div className="nav"><NavLink to="/carrito">Carrito</NavLink></div>
     </nav>
   )
 }

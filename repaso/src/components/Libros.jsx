@@ -9,8 +9,10 @@ export default function Libros ({children}) {
   ];
   
   return(
-    <BookTheme.Provider value={libros}>
-      {children}
-    </BookTheme.Provider>
+    <>
+      <BookTheme.Provider value={libros}>
+        {children}
+      </BookTheme.Provider>
+    </>
   )
 }

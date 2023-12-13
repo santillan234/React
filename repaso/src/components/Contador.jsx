@@ -4,7 +4,7 @@ import { initialState, reducer } from "../reducer/reducer"
 
 export const Contador = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  
+
   const sumar = () => dispatch({type: TYPES.incrementar})
   const restar = () => dispatch({type: TYPES.decrementar})
   const sumar2 = () => dispatch({type: TYPES.incrementar2, payload: 2})

@@ -10,6 +10,9 @@ import Tema from "./components/Tema"
 import Header from "./components/Header"
 import { Contador } from "./components/Contador"
 import Mouse from "./components/Mouse"
+import Form from "./components/Form"
+import Login from "./components/Login"
+import Carrito from "./components/Carrito"
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/reloj" element={<RelojEffect />}/>
         <Route path="/libros" element={<Libros> <BookList/> </Libros>}/>
         <Route path="/contador" element={<Contador />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/carrito" element={<Carrito />} />
       </Routes>
       <Tema> <Header /> </Tema>
       <Mouse />
