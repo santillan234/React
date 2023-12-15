@@ -87,7 +87,7 @@ export default function Login () {
             }} 
           />
           <button>Log In</button>
-          <p className="error">{state.error}</p>
+          {state.error && <p className="error">{state.error}</p>}
         </form>
       }
     </div>

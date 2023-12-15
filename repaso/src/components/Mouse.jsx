@@ -35,7 +35,7 @@ export default function Mouse () {
         height: '50px',
         transform: `translate(${posicion.x}px, ${posicion.y}px)`
       }}/>
-      <button onClick={() => setActivar(!activar)}>
+      <button onClick={() => setActivar(!activar)} style={{marginTop: '10px'}}>
         {activar ? 'DESACTIVAR' : 'ACTIVAR'} seguir puntero
       </button>
     </>
