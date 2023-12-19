@@ -42,7 +42,11 @@
 }
 
 .border {
+  margin: 0 auto;
   border: solid 2px #888;
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .form{

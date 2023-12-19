@@ -8,9 +8,11 @@ export default function Header () {
     <header 
       className={theme} 
       style={{
-        marginTop: "50px",
+        marginTop: '50px',
         display: 'flex',
         justifyContent: 'center',
+        margin: '0 auto',
+        width: 'fit-content'
         }}>
       <form style={{width: '150px'}}>
         <fieldset>

@@ -13,6 +13,10 @@ import Mouse from "./components/Mouse"
 import Form from "./components/Form"
 import Login from "./components/Login"
 import Carrito from "./components/Carrito"
+import Apis from "./components/Apis"
+import ApiCat from "./components/ApiCat"
+import ApiPeliculas from "./components/ApiPeliculas"
+import ApiBreaking from "./components/ApiBreaking"
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
         <Route path="/form" element={<Form />} />
         <Route path="/login" element={<Login />} />
         <Route path="/carrito" element={<Carrito />} />
+        <Route path="/apis" element={<Apis />} />
+        <Route path="/apis/cat" element={<ApiCat />} />
+        <Route path="/apis/peliculas" element={<ApiPeliculas />} />
+        <Route path="/apis/breaking-bad" element={<ApiBreaking />} />
       </Routes>
       <Tema> <Header /> </Tema>
       <Mouse />

@@ -7,6 +7,7 @@ export function Nav () {
         marginBottom: '50px',
         padding: '20px',
         fontSize: '20px',
+        width: 'fit-content'
       }}>
       <div className="nav"><NavLink to="/">Inicio</NavLink></div>
       <div className="nav"><NavLink to="/useState">useState</NavLink></div>
@@ -16,6 +17,7 @@ export function Nav () {
       <div className="nav"><NavLink to="/form">Form</NavLink></div>
       <div className="nav"><NavLink to="/login">Login</NavLink></div>
       <div className="nav"><NavLink to="/carrito">Carrito</NavLink></div>
+      <div className="nav"><NavLink to="/apis">APIS</NavLink></div>
     </nav>
   )
 }
