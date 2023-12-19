@@ -4,10 +4,11 @@ export function Nav () {
   return(
     <nav style={{
         border: "solid 2px #646cff",
-        marginBottom: '50px',
         padding: '20px',
         fontSize: '20px',
-        width: 'fit-content'
+        width: 'fit-content',
+        margin: '0 auto',
+        marginBottom: '50px'
       }}>
       <div className="nav"><NavLink to="/">Inicio</NavLink></div>
       <div className="nav"><NavLink to="/useState">useState</NavLink></div>
