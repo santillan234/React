@@ -1,12 +1,9 @@
 import { useReducer } from "react"
 import confetti from "canvas-confetti"
+import { useEffect } from "react"
 
 const initialState = {
-  products: [
-    {id: 1, name: 'Producto A', price: 100},
-    {id: 2, name: 'Producto B', price: 200},
-    {id: 3, name: 'Producto C', price: 500}
-  ],
+  products: [],
   cart: []
 }
 
@@ -50,8 +47,12 @@ const reducer = (state, action) => {
       }
     }
 
-    case 'CLEAR_CART': 
-      return initialState
+    case 'READ_STATE':
+      return {
+        ...state,
+        products: action.payload[0],
+        cart: action.payload[1]
+      }
 
     default:
       return state
@@ -109,10 +110,26 @@ export default function Carrito () {
     return quantity
   }
 
+  const updateState = async () => {
+    const urlProducts = 'https://my-json-server.typicode.com/santillan234/apiCart/products'
+    const urlCart = 'https://my-json-server.typicode.com/santillan234/apiCart/cart'
+    const resProducts = await fetch(urlProducts)
+    const resCart = await fetch(urlCart)
+    const newItem = await resProducts.json()
+    const newItemInCart = await resCart.json()
+
+    dispatch({type: 'READ_STATE', payload: [newItem, newItemInCart]})
+  }
+
+  useEffect(() => {
+    updateState()
+  }, [])
+
   const alerta = () => {
     if(state.cart.length > 0){
       alert("Compra Exitosa!")
       confetti()
+      updateState()
     } else {
       alert("Error: el carrito debe tener al menos un producto")
     }
@@ -131,10 +148,9 @@ export default function Carrito () {
       {totalQuantity() == 1 && <h4>Total: {totalQuantity()} Unidad</h4>}
       {totalQuantity() > 1 && <h4>Total: {totalQuantity()} Unidades</h4>}
       {totalPrice() > 0 && <h4>Total: ${totalPrice()} </h4>}
-      <button style={{backgroundColor: "#4CAF50", marginRight: "10px"}} onClick={clearCart}>Limpiar carrito</button>
+      <button style={{backgroundColor: "#4CAF50", marginRight: "10px"}} onClick={updateState}>Limpiar carrito</button>
       <button style={{backgroundColor: "#4CAF50"}} onClick={() => {
           alerta()
-          clearCart()
         }}>Comprar
       </button>
 
